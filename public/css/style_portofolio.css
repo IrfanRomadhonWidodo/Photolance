@@ -1,0 +1,36 @@
+
+    .gallery-item .absolute {
+        transition: opacity 0.3s ease;
+    }
+    
+    #load-more-btn:hover .absolute {
+        width: 100%;
+    }
+    
+    #load-more-btn:hover {
+        color: white;
+    }
+    
+    #load-more-btn .absolute {
+        z-index: 0;
+    }
+    
+    .gallery-item {
+        animation: fadeIn 0.5s ease forwards;
+    }
+    
+    @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(10px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+    
+    .hidden-item.show {
+        display: block;
+        animation: fadeIn 0.5s ease forwards;
+    }
+    
+    @media (min-width: 768px) {
+        .hidden-item.show {
+            display: block;
+        }
+    }

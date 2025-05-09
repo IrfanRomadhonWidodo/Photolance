@@ -9,11 +9,11 @@
 
     <!-- Navigation Links (Desktop) -->
     <ul class="hidden md:flex space-x-6 text-blue-900 font-medium">
-        <li><a href="{{ route('dashboard') }}" class="hover:text-blue-500 {{ request()->routeIs('dashboard') ? 'text-blue-900' : '' }}">Home</a></li>
-        <li><a href="#" class="hover:text-blue-500">Galeri</a></li>
-        <li><a href="#" class="hover:text-blue-500">Layanan</a></li>
-        <li><a href="#" class="hover:text-blue-500">Booking</a></li>
-        <li><a href="#" class="hover:text-blue-500">Tentang Kami</a></li>
+        <li><a href="#home" class="hover:text-blue-500 {{ request()->routeIs('dashboard') ? 'text-blue-900' : '' }}">Home</a></li>
+        <li><a href="#portofolio" class="hover:text-blue-500">Galeri</a></li>
+        <li><a href="#layanan" class="hover:text-blue-500">Layanan</a></li>
+        <li><a href="#booking" class="hover:text-blue-500">Booking</a></li>
+        <li><a href="#tentang-kami" class="hover:text-blue-500">Tentang Kami</a></li>
     </ul>
 
     <!-- User Dropdown -->

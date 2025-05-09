@@ -53,7 +53,11 @@ class Comment extends Component
         $this->replyingTo = $commentId;
     }
     
-    
+    public function toggleOptions()
+    {
+        $this->showOptions = !$this->showOptions;
+    }
+
     public function render()
     {
         return view('livewire.comment');

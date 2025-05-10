@@ -135,7 +135,7 @@
 </section>
 
 <!-- Statistics Section -->
-<section class="py-20 bg-gradient-to-r from-blue-900 to-indigo-900 text-white">
+<section class="py-20 bg-gradient-to-r from-blue-800 to-indigo-900 text-white">
     <div class="container mx-auto px-6">
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
             
@@ -144,7 +144,7 @@
                 <div class="text-6xl font-extrabold mb-2 text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-blue-600">
                     {{ $jumlahEmployee }}
                 </div>
-                <div class="text-blue-200 text-2xl">Employee</div>
+                <div class="text-blue-100 text-2xl">Employee</div>
             </div>
 
             <!-- Booking Sukses Card -->
@@ -152,7 +152,7 @@
                 <div class="text-6xl font-extrabold mb-2 text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-blue-600">
                     500
                 </div>
-                <div class="text-blue-200 text-2xl">Booking Sukses</div>
+                <div class="text-blue-100 text-2xl">Booking Sukses</div>
             </div>
 
             <!-- User Aktif Card -->
@@ -160,7 +160,7 @@
                 <div class="text-6xl font-extrabold mb-2 text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-blue-600">
                     {{ $jumlahUser }}
                 </div>
-                <div class="text-blue-200 text-2xl">User Aktif</div>
+                <div class="text-blue-100 text-2xl">User Aktif</div>
             </div>
 
         </div>

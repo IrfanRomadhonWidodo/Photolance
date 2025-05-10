@@ -25,35 +25,7 @@
     </style>
 </head>
 <body class="bg-white text-gray-900">
-    <!-- Memanggil Navigation -->
-    <x-app-layout>
-    </x-app-layout>
-    
-    <!-- Memanggil Landing Page -->
-    <section id="home">
-        @include('landing_page')
-    </section>
 
-    <!-- Memanggil Portofolio -->
-    <section id="portofolio">
-        @include('portofolio')
-    </section>
-
-    <!-- Memanggil Photographer -->
-    <section id="photographer">
-        @include('photographers.index')
-    </section>
-
-
-    <!-- Memanggil Layanan -->
-    <section id="layanan">
-        @include('layanan')
-    </section>
-
-    <!-- Memanggil Employee -->
-    <section id="employee">
-        @include('employee.index')
-    </section>
 
     <!-- Memanggil Tentang Kami -->
     <section id="tentang-kami">

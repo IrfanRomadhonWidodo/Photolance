@@ -1,9 +1,9 @@
 <!-- Section: Layanan Kami -->
-<section class="py-20 bg-white">
+<section class="py-20 bg-blue-900">
     <div class="w-full px-0">
 
-        <h2 class="text-3xl font-bold text-center text-gray-800 mb-2">Layanan Kami</h2>
-        <div class="w-24 h-1 bg-blue-900 mx-auto mb-10"></div>
+        <h2 class="text-3xl font-bold text-center text-white mb-2">Layanan Kami</h2>
+        <div class="w-24 h-1 bg-white mx-auto mb-10"></div>
         
         <div class="relative">
             <!-- Left scroll button -->

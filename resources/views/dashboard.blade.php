@@ -50,6 +50,10 @@
         @include('layanan')
     </section>
 
+    <!-- Memanggil Employee -->
+    <section id="employee">
+        @include('employee.index')
+    </section>
 
     <!-- Memanggil Feedback -->
     <section id="feedback">

@@ -55,6 +55,9 @@
         @include('employee.index')
     </section>
 
+    <!-- Memanggil Tentang Kami -->
+    <section id="tentang-kami">
+        @include('tentangkami')
     <!-- Memanggil Feedback -->
     <section id="feedback">
         @include('feedback.form')

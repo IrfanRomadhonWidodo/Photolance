@@ -20,7 +20,7 @@
     </div>
 
     <!-- Kanan -->
-<a href="#" class="relative inline-block px-6 py-3 font-semibold text-blue-600 border border-blue-500 bg-white rounded-lg overflow-hidden transition-all duration-300 group">
+<a href="#" onclick="openEmployeeModal(); return false;" class="relative inline-block px-6 py-3 font-semibold text-blue-600 border border-blue-500 bg-white rounded-lg overflow-hidden transition-all duration-300 group">
   <span class="relative z-10 group-hover:text-white transition-colors duration-300">Daftar Sekarang</span>
   <span class="absolute inset-0 bg-gray-700 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
 </a>
@@ -28,3 +28,6 @@
     
   </div>
 </div>
+
+<!-- Include the employee registration form -->
+@include('employee.form')

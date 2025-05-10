@@ -21,6 +21,16 @@ class EmployeeResource extends Resource
     {
         return $form
             ->schema([
+                Forms\Components\FileUpload::make('image')
+                    ->label('Foto Profil')
+                    ->image()
+                    ->directory('employee-photos') // folder di storage/app/public
+                    ->visibility('public')
+                    ->imagePreviewHeight('100')
+                    ->maxSize(1024) // 1MB
+                    ->disk('public') // Pastikan menggunakan disk 'public'
+                    ->nullable(),
+
                 Forms\Components\TextInput::make('name')
                     ->label('Nama')
                     ->required()
@@ -46,7 +56,7 @@ class EmployeeResource extends Resource
                     ])
                     ->required(),
 
-                    Forms\Components\TextInput::make('portofolio')
+                Forms\Components\TextInput::make('portofolio')
                     ->label('Link Portofolio (Google Drive, Website, etc.)')
                     ->placeholder('Masukkan link portofolio')
                     ->url() // Validasi agar hanya URL yang bisa dimasukkan
@@ -68,6 +78,7 @@ class EmployeeResource extends Resource
     {
         return $table
             ->columns([
+                
                 Tables\Columns\TextColumn::make('name')->label('Nama'),
                 Tables\Columns\TextColumn::make('email')->label('Email'),
                 Tables\Columns\TextColumn::make('user.name')->label('User')->sortable()->searchable(),
@@ -88,7 +99,7 @@ class EmployeeResource extends Resource
                     }),
                 Tables\Columns\TextColumn::make('portofolio')
                     ->label('Portofolio')
-                    ->formatStateUsing(fn (string $state): string => "<a href='{$state}' target='_blank' style='font-size: 12px; text-align: left; text-decoration: underline; color: navy;'>Lihat Portofolio</a>")
+                    ->formatStateUsing(fn (?string $state): string => $state ? "<a href='{$state}' target='_blank' style='font-size: 12px; text-align: left; text-decoration: underline; color: navy;'>Lihat Portofolio</a>" : "-")
                     ->html()
                     ->sortable(),
                 

@@ -39,6 +39,12 @@
         @include('portofolio')
     </section>
 
+    <!-- Memanggil Photographer -->
+    <section id="photographer">
+        @include('photographers.index')
+    </section>
+
+
     <!-- Memanggil Layanan -->
     <section id="layanan">
         @include('layanan')

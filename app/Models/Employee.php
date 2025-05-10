@@ -19,6 +19,7 @@ class Employee extends Model
         'user_id', 
         'kategori',
         'portofolio',
+        'image',
         'status',
     ];
 
@@ -27,7 +28,7 @@ class Employee extends Model
         return $this->belongsTo(User::class);
     }
     protected $casts = [
-        
+        'foto' => 'array',
     ];
     
 }

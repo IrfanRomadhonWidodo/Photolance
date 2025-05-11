@@ -24,8 +24,8 @@
         <ul class="space-y-3 text-sm font-medium">
             <li><a href="#home" class="block py-2 px-3 rounded-lg hover:bg-blue-800 transition">Home</a></li>
             <li><a href="#portofolio" class="block py-2 px-3 rounded-lg hover:bg-blue-800 transition">Galeri</a></li>
-            <li><a href="#layanan" class="block py-2 px-3 rounded-lg hover:bg-blue-800 transition">Layanan</a></li>
             <li><a href="#booking" class="block py-2 px-3 rounded-lg hover:bg-blue-800 transition">Booking</a></li>
+            <li><a href="#layanan" class="block py-2 px-3 rounded-lg hover:bg-blue-800 transition">Layanan</a></li>
             <li><a href="#tentangkami" class="block py-2 px-3 rounded-lg hover:bg-blue-800 transition">Tentang Kami</a></li>
         </ul>
     
@@ -44,8 +44,8 @@
     <ul class="hidden md:flex space-x-6 text-blue-900 font-medium">
         <li><a href="#home" class="hover:text-blue-500">Home</a></li>
         <li><a href="#portofolio" class="hover:text-blue-500">Galeri</a></li>
-        <li><a href="#layanan" class="hover:text-blue-500">Layanan</a></li>
         <li><a href="#booking" class="hover:text-blue-500">Booking</a></li>
+        <li><a href="#layanan" class="hover:text-blue-500">Layanan</a></li>
         <li><a href="#tentangkami" class="hover:text-blue-500">Tentang Kami</a></li>
     </ul>
     <div class="hidden md:flex items-center space-x-4">

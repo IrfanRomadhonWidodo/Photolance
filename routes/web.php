@@ -27,12 +27,10 @@ Route::get('/', [App\Http\Controllers\TentangKamiController::class, 'index2']);
 Route::get('/booking-dashboard_booking', function () {
     return view('booking.dashboard_booking');
 })->name('booking.dashboard_booking');
-Route::get('/dashboard/view', function () {
-    return view('dashboard');
-})->name('dashboard.view');
+
 
 Route::middleware(['auth'])->group(function () {
-    Route::get('/dashboard/booking', [BookingController::class, 'index'])->name('booking.dashboard');
+    Route::get('/dashboard/booking_booking', [BookingController::class, 'index'])->name('booking.dashboard_booking');
     Route::get('/booking/create', [BookingController::class, 'create'])->name('booking.create');
     Route::post('/booking/check-availability', [BookingController::class, 'checkAvailability'])->name('booking.check-availability');
     Route::post('/booking', [BookingController::class, 'store'])->name('booking.store');

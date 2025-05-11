@@ -12,8 +12,15 @@ class BookingController extends Controller
 {
     public function index()
     {
-        $bookings = Auth::user()->bookings ?? collect(); // fallback jika null
-        return view('booking.dashboard_booking', compact('bookings'));
+            // Dapatkan ID user yang sedang login
+    $userId = Auth::id();
+    
+    // Query langsung ke model Booking dengan kondisi user_id
+    $bookings = Booking::where('user_id', $userId)
+                       ->with('employee')
+                       ->get();
+                       
+    return view('booking.dashboard_booking', compact('bookings'));
     }
 
     public function create()

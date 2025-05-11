@@ -4,6 +4,7 @@ use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\EmployeeController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\BookingController;
 
 Route::get('/', function () {
     return view('home');
@@ -23,12 +24,20 @@ Route::get('/home', [App\Http\Controllers\TentangKamiController::class, 'index2'
 Route::get('/', [App\Http\Controllers\TentangKamiController::class, 'index2']);
 
 //Booking
-Route::get('/booking-dashboard', function () {
+Route::get('/booking-dashboard_booking', function () {
     return view('booking.dashboard_booking');
-})->name('booking.dashboard');
+})->name('booking.dashboard_booking');
 Route::get('/dashboard/view', function () {
     return view('dashboard');
 })->name('dashboard.view');
+
+Route::middleware(['auth'])->group(function () {
+    Route::get('/dashboard/booking', [BookingController::class, 'index'])->name('booking.dashboard');
+    Route::get('/booking/create', [BookingController::class, 'create'])->name('booking.create');
+    Route::post('/booking/check-availability', [BookingController::class, 'checkAvailability'])->name('booking.check-availability');
+    Route::post('/booking', [BookingController::class, 'store'])->name('booking.store');
+    Route::get('/booking/success', [BookingController::class, 'success'])->name('booking.success');
+});
 
 
 

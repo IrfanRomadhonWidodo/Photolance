@@ -23,7 +23,7 @@
             Mulai perjalanan Photolance sempurnamu hari ini!
         </p>
 
-<a href="{{ route('booking.dashboard') }}" class="inline-block bg-blue-600 text-white py-3 px-6 rounded-xl shadow hover:bg-blue-700 transition duration-200">
+<a href="{{ route('booking.dashboard_booking') }}" class="inline-block bg-blue-600 text-white py-3 px-6 rounded-xl shadow hover:bg-blue-700 transition duration-200">
     Pesan Sekarang
 </a>
 

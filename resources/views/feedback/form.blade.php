@@ -61,7 +61,7 @@
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 20l4-16m2 16l4-16M6 9h14M4 15h14" />
                         </svg>
                     </div>
-                    <input type="text" name="subject" id="subject" value="{{ old('subject') }}" class="focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 sm:text-sm border-gray-300 rounded-md" placeholder="Subjek Feedback" required>
+                    <input type="text" name="subject" id="subject" value="{{ old('subject') }}" class="focus:ring-blue-500 focus:border-blue-500 block w-full pl-3 sm:text-sm border-gray-300 rounded-md" placeholder="Subjek Feedback" required>
                 </div>
             </div>
             

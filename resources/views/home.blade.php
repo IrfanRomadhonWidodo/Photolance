@@ -34,7 +34,7 @@
     </section>
 
     <!-- Memanggil Portofolio -->
-    <section id="portofolio">
+    <section id="portofolio" class="scroll-mt-16">
         @include('portofolio')
     </section>
 
@@ -49,13 +49,13 @@
     </section>
 
     <!-- Memanggil Layanan -->
-    <section id="layanan">
+    <section id="layanan" class="scroll-mt-20">
         @include('layanan')
     </section>
 
 
-        <!-- Memanggil Tentang Kami -->
-    <section id="tentang-kami">
+    <!-- Memanggil Tentang Kami -->
+    <section id="tentangkami" >
         @include('tentangkami')
     </section>
 

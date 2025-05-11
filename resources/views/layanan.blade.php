@@ -1,5 +1,5 @@
 <!-- Section: Layanan Kami -->
-<section class="py-20 bg-blue-900">
+<section class="py-10 bg-blue-900">
     <div class="w-full px-0">
 
         <h2 class="text-3xl font-bold text-center text-white mb-2">Layanan Kami</h2>

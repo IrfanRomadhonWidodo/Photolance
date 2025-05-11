@@ -13,7 +13,7 @@
         <li><a href="#portofolio" class="hover:text-blue-500">Galeri</a></li>
         <li><a href="#layanan" class="hover:text-blue-500">Layanan</a></li>
         <li><a href="#booking" class="hover:text-blue-500">Booking</a></li>
-        <li><a href="#tentang-kami" class="hover:text-blue-500">Tentang Kami</a></li>
+        <li><a href="#tentangkami" class="hover:text-blue-500">Tentang Kami</a></li>
     </ul>
 
     <!-- User Dropdown -->

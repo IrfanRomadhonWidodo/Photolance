@@ -185,7 +185,7 @@
                     <div class="p-6">
                         <h3 class="text-xl font-bold text-blue-900 mb-1">Irfan Romadhon Widodo</h3>
                         <p class="text-blue-600 mb-3">Frontend Developer</p>
-                        <p class="text-gray-600 text-sm">Mahasiswa Teknik Informatika Universitas Jenderal Soedirman yang berfokus pada pengembangan antarmuka pengguna yang intuitif dan responsif.</p>
+                        <p class="text-gray-600 text-sm">Mahasiswa Informatika Universitas Jenderal Soedirman yang berfokus pada pengembangan antarmuka pengguna yang intuitif dan responsif.</p>
                         <div class="flex mt-4 space-x-3">
                             <a href="https://www.instagram.com/irfan_romadhonn/" class="text-blue-500 hover:text-blue-700">
                                 <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
@@ -220,7 +220,7 @@
                     <div class="p-6">
                         <h3 class="text-xl font-bold text-blue-900 mb-1">Defit Bagus Saputra</h3>
                         <p class="text-blue-600 mb-3">Backend Developer</p>
-                        <p class="text-gray-600 text-sm">Mahasiswa Teknik Informatika Universitas Jenderal Soedirman yang ahli dalam pengembangan backend dan basis data aplikasi web.</p>
+                        <p class="text-gray-600 text-sm">Mahasiswa Informatika Universitas Jenderal Soedirman yang ahli dalam pengembangan backend dan basis data aplikasi web.</p>
                         <div class="flex mt-4 space-x-3">
                             <a href="https://www.instagram.com/deefb4_/" class="text-blue-500 hover:text-blue-700">
                                 <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
@@ -255,7 +255,7 @@
                     <div class="p-6">
                         <h3 class="text-xl font-bold text-blue-900 mb-1">Alfan Fauzan Ridlo</h3>
                         <p class="text-blue-600 mb-3">UI/UX Designer</p>
-                        <p class="text-gray-600 text-sm">Mahasiswa Desain Komunikasi Visual Universitas Jenderal Soedirman yang berfokus pada menciptakan pengalaman pengguna yang menarik dan intuitif.</p>
+                        <p class="text-gray-600 text-sm">Mahasiswa Informatika Universitas Jenderal Soedirman yang berfokus pada menciptakan pengalaman pengguna yang menarik dan intuitif.</p>
                         <div class="flex mt-4 space-x-3">
                             <a href="https://www.instagram.com/serryozan/" class="text-blue-500 hover:text-blue-700">
                                 <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">

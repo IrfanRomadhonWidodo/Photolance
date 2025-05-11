@@ -27,15 +27,13 @@
 <body class="bg-white text-gray-900">
 
 
-    <!-- Memanggil Tentang Kami -->
-    <section id="tentang-kami">
-        @include('tentangkami')
-    </section>
+<a href="{{ route('dashboard') }}" class="absolute top-4 left-4 bg-blue-600 text-white px-6 py-3 rounded-lg shadow-md hover:bg-blue-700 hover:scale-105 hover:shadow-lg transition-transform duration-300 ease-in-out flex items-center">
+    <i class="fas fa-arrow-left mr-2"></i> Kembali ke Dashboard
+</a>
 
-    <!-- Memanggil Feedback -->
-    <section id="feedback">
-        @include('feedback.form')
-    </section>
+
+
+
 
     <!-- Memanggil Footer -->
     @include('footer')

@@ -22,7 +22,13 @@ Route::get('/dashboard', [App\Http\Controllers\TentangKamiController::class, 'in
 Route::get('/home', [App\Http\Controllers\TentangKamiController::class, 'index2'])->name('home');
 Route::get('/', [App\Http\Controllers\TentangKamiController::class, 'index2']);
 
-
+//Booking
+Route::get('/booking-dashboard', function () {
+    return view('booking.dashboard_booking');
+})->name('booking.dashboard');
+Route::get('/dashboard/view', function () {
+    return view('dashboard');
+})->name('dashboard.view');
 
 
 

@@ -1,4 +1,4 @@
-<section class="relative h-72 overflow-hidden bg-gradient-to-r from-blue-900 to-indigo-900">
+<section class="relative h-130 overflow-hidden bg-gradient-to-r from-blue-900 to-indigo-900">
     <div class="absolute inset-0">
         <div class="w-full h-full bg-cover bg-center" 
             style="background-image: url('{{ asset('img/photography-bg.jpg') }}'); filter: brightness(0.4);">
@@ -15,6 +15,34 @@
             Platform booking fotografi profesional yang menghubungkan <span class="text-blue-300 font-semibold">fotografer berbakat</span> 
             dengan klien yang membutuhkan layanan fotografi berkualitas tinggi.
         </p>
+    </div>
+    <div class="container mx-auto px-6 py-8">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            
+            <!-- Employee Card -->
+            <div class="bg-white/10 backdrop-blur-md p-8 rounded-2xl shadow-lg hover:shadow-xl transform transition duration-300 hover:scale-105">
+                <div class="text-6xl font-extrabold mb-2 text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-blue-600">
+                    {{ $jumlahEmployee }}
+                </div>
+                <div class="text-blue-100 text-2xl">Employee</div>
+            </div>
+
+            <!-- Booking Sukses Card -->
+            <div class="bg-white/10 backdrop-blur-md p-8 rounded-2xl shadow-lg hover:shadow-xl transform transition duration-300 hover:scale-105">
+                <div class="text-6xl font-extrabold mb-2 text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-blue-600">
+                    500
+                </div>
+                <div class="text-blue-100 text-2xl">Booking Sukses</div>
+            </div>
+
+            <!-- User Aktif Card -->
+            <div class="bg-white/10 backdrop-blur-md p-8 rounded-2xl shadow-lg hover:shadow-xl transform transition duration-300 hover:scale-105">
+                <div class="text-6xl font-extrabold mb-2 text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-blue-600">
+                    {{ $jumlahUser }}
+                </div>
+                <div class="text-blue-100 text-2xl">User Aktif</div>
+            </div>
+        </div>
     </div>
 </section>
 
@@ -134,38 +162,6 @@
     </div>
 </section>
 
-<!-- Statistics Section -->
-<section class="py-20 bg-gradient-to-r from-blue-800 to-indigo-900 text-white">
-    <div class="container mx-auto px-6">
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-            
-            <!-- Employee Card -->
-            <div class="bg-white/10 backdrop-blur-md p-8 rounded-2xl shadow-lg hover:shadow-xl transform transition duration-300 hover:scale-105">
-                <div class="text-6xl font-extrabold mb-2 text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-blue-600">
-                    {{ $jumlahEmployee }}
-                </div>
-                <div class="text-blue-100 text-2xl">Employee</div>
-            </div>
-
-            <!-- Booking Sukses Card -->
-            <div class="bg-white/10 backdrop-blur-md p-8 rounded-2xl shadow-lg hover:shadow-xl transform transition duration-300 hover:scale-105">
-                <div class="text-6xl font-extrabold mb-2 text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-blue-600">
-                    500
-                </div>
-                <div class="text-blue-100 text-2xl">Booking Sukses</div>
-            </div>
-
-            <!-- User Aktif Card -->
-            <div class="bg-white/10 backdrop-blur-md p-8 rounded-2xl shadow-lg hover:shadow-xl transform transition duration-300 hover:scale-105">
-                <div class="text-6xl font-extrabold mb-2 text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-blue-600">
-                    {{ $jumlahUser }}
-                </div>
-                <div class="text-blue-100 text-2xl">User Aktif</div>
-            </div>
-
-        </div>
-    </div>
-</section>
 
 
 <!-- Team Section -->

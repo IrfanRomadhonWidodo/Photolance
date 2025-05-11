@@ -22,11 +22,11 @@
         <button id="close-btn" class="text-white text-2xl mb-4">&times;</button>
     
         <ul class="space-y-3 text-sm font-medium">
-            <li><a href="#" class="block py-2 px-3 rounded-lg hover:bg-blue-800 transition">Home</a></li>
-            <li><a href="#" class="block py-2 px-3 rounded-lg hover:bg-blue-800 transition">Galeri</a></li>
-            <li><a href="#" class="block py-2 px-3 rounded-lg hover:bg-blue-800 transition">Layanan</a></li>
-            <li><a href="#" class="block py-2 px-3 rounded-lg hover:bg-blue-800 transition">Booking</a></li>
-            <li><a href="#" class="block py-2 px-3 rounded-lg hover:bg-blue-800 transition">Tentang Kami</a></li>
+            <li><a href="#home" class="block py-2 px-3 rounded-lg hover:bg-blue-800 transition">Home</a></li>
+            <li><a href="#portofolio" class="block py-2 px-3 rounded-lg hover:bg-blue-800 transition">Galeri</a></li>
+            <li><a href="#layanan" class="block py-2 px-3 rounded-lg hover:bg-blue-800 transition">Layanan</a></li>
+            <li><a href="#booking" class="block py-2 px-3 rounded-lg hover:bg-blue-800 transition">Booking</a></li>
+            <li><a href="#tentangkami" class="block py-2 px-3 rounded-lg hover:bg-blue-800 transition">Tentang Kami</a></li>
         </ul>
     
         <!-- Login & Register Buttons -->
@@ -42,11 +42,11 @@
     
     
     <ul class="hidden md:flex space-x-6 text-blue-900 font-medium">
-        <li><a href="#" class="hover:text-blue-500">Home</a></li>
-        <li><a href="#" class="hover:text-blue-500">Galeri</a></li>
-        <li><a href="#" class="hover:text-blue-500">Layanan</a></li>
-        <li><a href="#" class="hover:text-blue-500">Booking</a></li>
-        <li><a href="#" class="hover:text-blue-500">Tentang Kami</a></li>
+        <li><a href="#home" class="hover:text-blue-500">Home</a></li>
+        <li><a href="#portofolio" class="hover:text-blue-500">Galeri</a></li>
+        <li><a href="#layanan" class="hover:text-blue-500">Layanan</a></li>
+        <li><a href="#booking" class="hover:text-blue-500">Booking</a></li>
+        <li><a href="#tentangkami" class="hover:text-blue-500">Tentang Kami</a></li>
     </ul>
     <div class="hidden md:flex items-center space-x-4">
         <a href="{{ route('login') }}" class="border border-blue-900 text-blue-900 px-4 py-1 rounded-full hover:bg-blue-900 hover:text-white text-sm">

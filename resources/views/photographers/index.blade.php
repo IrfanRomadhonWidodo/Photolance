@@ -4,11 +4,11 @@
     $photographers = \App\Models\Employee::where('kategori', 'photographer')->where('status', 'approved')->get();
 @endphp
 
-<div class="bg-gradient-to-b from-blue-100 to-white py-20">
+<div class="bg-gradient-to-b from-blue-100 to-white py-15">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-4/5">
         <div class="text-center mb-16">
             <h2
-                class="text-4xl font-bold text-blue-900 tracking-tight relative mt-3 mb-6 bg-gradient-to-r from-blue-600 to-blue-400 inline-block text-transparent bg-clip-text after:block after:w-20 after:h-1 after:bg-blue-600 after:mx-auto after:mt-2">
+                class="text-4xl font-bold text-blue-900 tracking-tight relative mt-10 mb-6 bg-gradient-to-r from-blue-600 to-blue-400 inline-block text-transparent bg-clip-text after:block after:w-20 after:h-1 after:bg-blue-600 after:mx-auto after:mt-2">
                 Fotografer Profesional Kami
             </h2>
         </div>

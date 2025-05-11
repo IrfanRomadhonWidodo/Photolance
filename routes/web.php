@@ -18,9 +18,14 @@ Route::get('/dashboard', function () {
 Route::post('/employees', [App\Http\Controllers\EmployeeController::class, 'store'])->name('employees.store')->middleware('auth');
 
 //Untuk Tentang Kami Bagian cacah
-Route::get('/dashboard', [App\Http\Controllers\DashboardController::class, 'index'])->name('dashboard');
+Route::get('/dashboard', [App\Http\Controllers\TentangKamiController::class, 'index'])->name('dashboard');
+Route::get('/home', [App\Http\Controllers\TentangKamiController::class, 'index2'])->name('home');
+Route::get('/', [App\Http\Controllers\TentangKamiController::class, 'index2']);
 
 
-require __DIR__.'/auth.php';
+
+
+
+require __DIR__ . '/auth.php';
 
 

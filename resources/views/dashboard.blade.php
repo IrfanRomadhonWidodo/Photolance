@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Photo Studio Booking</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    @livewireStyles
     <style>
         .slide {
     position: absolute;
@@ -44,6 +43,10 @@
         @include('photographers.index')
     </section>
 
+    <!-- Memanggil Booking -->
+    <section id="booking">
+        @include('booking.index')
+    </section>
 
     <!-- Memanggil Layanan -->
     <section id="layanan">

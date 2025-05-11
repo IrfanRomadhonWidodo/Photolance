@@ -8,7 +8,12 @@
     <div class="absolute inset-0 bg-blue-900 bg-opacity-50 flex flex-col justify-center items-center text-white text-center">
         <h1 id="hero-text" class="text-4xl font-bold mb-4">Abadikan Momen Berharga Anda</h1>
         <p id="hero-subtext" class="text-lg mb-6 max-w-lg">Layanan fotografi profesional untuk setiap kebutuhan</p>
-        <button class="bg-white text-blue-900 font-semibold px-6 py-2.5 rounded-full shadow-lg hover:bg-gray-200">Book Now</button>
+        <a 
+        href="{{ Auth::check() ? route('dashboard') . '#booking' : route('login') }}"
+        class="bg-white text-blue-900 font-semibold px-6 py-2.5 rounded-full shadow-lg hover:bg-gray-200">
+        Pesan Sekarang
+        </a>
+
     </div>
 </div>
 <script src="{{ asset('js/script_home.js') }}"></script>

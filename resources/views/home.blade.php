@@ -29,14 +29,36 @@
     @include('navbar') 
 
     <!-- Memanggil Landing Page -->
-    @include('landing_page')
+    <section id="home">
+        @include('landing_page')
+    </section>
 
     <!-- Memanggil Portofolio -->
-    @include('portofolio')
+    <section id="portofolio">
+        @include('portofolio')
+    </section>
+
+    <!-- Memanggil Photographer -->
+    <section id="photographer">
+        @include('photographers.index')
+    </section>
+
+    <!-- Memanggil Booking -->
+    <section id="booking">
+        @include('booking.index')
+    </section>
 
     <!-- Memanggil Layanan -->
-    @include('layanan')    
-    
+    <section id="layanan">
+        @include('layanan')
+    </section>
+
+
+        <!-- Memanggil Tentang Kami -->
+    <section id="tentang-kami">
+        @include('tentangkami')
+    </section>
+
     <!-- Memanggil Footer -->
     @include('footer')
 </body>

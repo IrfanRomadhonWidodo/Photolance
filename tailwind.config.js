@@ -17,5 +17,10 @@ export default {
         },
     },
 
+        corePlugins: {
+        preflight: false, // Ini menonaktifkan optimasi Windsurf yang mendeteksi duplikat
+    },
+
+
     plugins: [forms],
 };

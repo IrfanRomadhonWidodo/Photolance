@@ -13,7 +13,7 @@
                     <div class="mb-6">
                         <div class="flex items-center justify-between mb-2">
                             <h3 class="text-lg font-medium text-gray-900">Book a Photographer</h3>
-                            <a href="{{ route('booking.dashboard') }}" class="text-blue-500 hover:underline">Back to Bookings</a>
+                            <a href="{{ route('booking.dashboard_booking') }}" class="text-blue-500 hover:underline">Back to Bookings</a>
                         </div>
                         <p class="text-gray-600">Please follow the steps below to book a photographer.</p>
                     </div>

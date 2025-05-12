@@ -30,23 +30,41 @@
                 </button>
             </x-slot>
 
-            <x-slot name="content">
-                <x-dropdown-link :href="route('profile.edit')">
-                    {{ __('Profile') }}
+    <x-slot name="content">
+        <div class="py-1 text-sm text-gray-700">
+            <x-dropdown-link :href="route('profile.edit')" class="flex items-center gap-2 hover:bg-blue-100 px-4 py-2 rounded transition">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-blue-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5.121 17.804A4 4 0 018 16h8a4 4 0 012.879 1.804M15 11a3 3 0 10-6 0 3 3 0 006 0z" />
+                </svg>
+                {{ __('Profile') }}
+            </x-dropdown-link>
+
+            <x-dropdown-link :href="route('booking.dashboard_booking')" class="flex items-center gap-2 hover:bg-purple-100 px-4 py-2 rounded transition">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-purple-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 4h10M5 11h14M5 19h14M5 15h14" />
+                </svg>
+                {{ __('Booking') }}
+            </x-dropdown-link>
+
+            <x-dropdown-link :href="route('payment.dashboard')" class="group flex items-center gap-2 px-4 py-2 rounded transition hover:bg-green-100 text-gray-700 hover:text-green-600">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-green-500 group-hover:text-green-600 transition" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-2m4-4h-6m0 0l2-2m-2 2l2 2" />
+                </svg>
+                {{ __('Payment') }}
+            </x-dropdown-link>
+
+            <form method="POST" action="{{ route('logout') }}">
+                @csrf
+                <x-dropdown-link :href="route('logout')" onclick="event.preventDefault(); this.closest('form').submit();" class="flex items-center gap-2 hover:bg-red-100 px-4 py-2 rounded transition text-red-600">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-red-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a2 2 0 11-4 0v-1m4-10V5a2 2 0 10-4 0v1" />
+                    </svg>
+                    {{ __('Log Out') }}
                 </x-dropdown-link>
-                <x-dropdown-link :href="route('payment.dashboard')">
-                    {{ __('Payment') }}
-                </x-dropdown-link>
-                                <x-dropdown-link :href="route('booking.dashboard_booking')">
-                    {{ __('Booking') }}
-                </x-dropdown-link>
-                <form method="POST" action="{{ route('logout') }}">
-                    @csrf
-                    <x-dropdown-link :href="route('logout')" onclick="event.preventDefault(); this.closest('form').submit();">
-                        {{ __('Log Out') }}
-                    </x-dropdown-link>
-                </form>
-            </x-slot>
+            </form>
+        </div>
+    </x-slot>
+
         </x-dropdown>
     </div>
 

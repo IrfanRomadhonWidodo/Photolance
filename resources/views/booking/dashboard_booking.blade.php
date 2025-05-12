@@ -6,7 +6,17 @@
         </h2>
     </x-slot>
 
-    <div class="py-12">
+        <div class="max-w-screen-md ml-9 mt-7">
+        <a href="{{ route('dashboard') }}" 
+        class="w-fit inline-flex items-center gap-2 px-4 py-2 border border-blue-600 text-blue-600 font-medium rounded-lg transition duration-200 hover:bg-blue-600 hover:text-white ml-0">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+            </svg>
+            Kembali ke Home
+        </a>
+    </div>
+
+    <div class="py-5">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="bg-white overflow-hidden shadow-xl sm:rounded-2xl">
                 <div class="p-8 bg-gradient-to-r from-blue-50 to-white border-b border-gray-200 rounded-t-2xl">

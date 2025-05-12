@@ -2,7 +2,7 @@
     <!-- Pending Bookings Section -->
     <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
         <div class="p-6 bg-white border-b border-gray-200">
-            <h3 class="text-lg font-medium text-gray-900 mb-4">{{ __('Pending Bookings') }}</h3>
+            <h3 class="text-lg font-medium text-gray-900 mb-4">{{ __('Pemesanan Tertunda') }}</h3>
             
             @if($pendingBookings->isEmpty())
                 <p class="text-gray-500">{{ __('No pending bookings available.') }}</p>
@@ -62,7 +62,7 @@
     <!-- Processing Payments Section -->
     <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
         <div class="p-6 bg-white border-b border-gray-200">
-            <h3 class="text-lg font-medium text-gray-900 mb-4">{{ __('Processing Payments') }}</h3>
+            <h3 class="text-lg font-medium text-gray-900 mb-4">{{ __('Pembayaran Diproses') }}</h3>
             
             @if($processingPayments->isEmpty())
                 <p class="text-gray-500">{{ __('No processing payments available.') }}</p>
@@ -132,7 +132,7 @@
     <!-- Completed Payments Section -->
     <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
         <div class="p-6 bg-white border-b border-gray-200">
-            <h3 class="text-lg font-medium text-gray-900 mb-4">{{ __('Completed Payments') }}</h3>
+            <h3 class="text-lg font-medium text-gray-900 mb-4">{{ __('Pembayaran Selesai') }}</h3>
             
             @if($completedPayments->isEmpty())
                 <p class="text-gray-500">{{ __('No completed payments available.') }}</p>

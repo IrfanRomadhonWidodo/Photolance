@@ -3,7 +3,6 @@
 namespace App\Filament\Resources;
 
 use App\Filament\Resources\BookingResource\Pages;
-use App\Filament\Resources\BookingResource\RelationManagers;
 use App\Models\Booking;
 use Filament\Forms;
 use Filament\Forms\Form;
@@ -11,7 +10,6 @@ use Filament\Resources\Resource;
 use Filament\Tables;
 use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
-use Illuminate\Database\Eloquent\SoftDeletingScope;
 
 class BookingResource extends Resource
 {
@@ -21,6 +19,15 @@ class BookingResource extends Resource
 
     public static function form(Form $form): Form
     {
+        // Generate time slots from 08:00 - 19:00
+        $slots = [];
+        for ($hour = 8; $hour < 19; $hour++) {
+            $start = str_pad($hour, 2, '0', STR_PAD_LEFT) . ':00';
+            $end = str_pad($hour + 1, 2, '0', STR_PAD_LEFT) . ':00';
+            $label = "$start - $end";
+            $slots[$hour] = $label;
+        }
+
         return $form
             ->schema([
                 Forms\Components\Select::make('user_id')
@@ -31,14 +38,22 @@ class BookingResource extends Resource
                     ->required(),
                 Forms\Components\DatePicker::make('booking_date')
                     ->required(),
-                Forms\Components\TextInput::make('time_slots')
+                Forms\Components\CheckboxList::make('time_slots')
+                    ->options($slots)
+                    ->columns(2)
                     ->required(),
                 Forms\Components\TextInput::make('category')
                     ->required()
                     ->maxLength(255),
                 Forms\Components\Textarea::make('notes')
                     ->columnSpanFull(),
-                Forms\Components\TextInput::make('status')
+                Forms\Components\Select::make('status')
+                    ->options([
+                        'pending' => 'Pending',
+                        'confirmed' => 'Confirmed',
+                        'completed' => 'Completed',
+                        'cancelled' => 'Cancelled',
+                    ])
                     ->required(),
             ]);
     }
@@ -48,31 +63,52 @@ class BookingResource extends Resource
         return $table
             ->columns([
                 Tables\Columns\TextColumn::make('user.name')
-                    ->numeric()
                     ->sortable(),
                 Tables\Columns\TextColumn::make('employee.name')
-                    ->numeric()
                     ->sortable(),
                 Tables\Columns\TextColumn::make('booking_date')
                     ->date()
                     ->sortable(),
+                Tables\Columns\TextColumn::make('time_slots')
+                    ->label('Time Slots')
+                    ->getStateUsing(function ($record) {
+                        if (!is_array($record->time_slots)) {
+                            return '';
+                        }
+                        
+                        $formattedSlots = [];
+                        foreach ($record->time_slots as $slot) {
+                            $hour = (int) $slot;
+                            $start = str_pad($hour, 2, '0', STR_PAD_LEFT) . ':00';
+                            $end = str_pad($hour + 1, 2, '0', STR_PAD_LEFT) . ':00';
+                            $formattedSlots[] = "$start - $end";
+                        }
+                        
+                        return implode(', ', $formattedSlots);
+                    }),
                 Tables\Columns\TextColumn::make('category')
                     ->searchable(),
-                Tables\Columns\TextColumn::make('status'),
+                Tables\Columns\BadgeColumn::make('status')
+                    ->colors([
+                        'warning' => 'pending',
+                        'primary' => 'confirmed', 
+                        'success' => 'completed',
+                        'danger' => 'cancelled',
+                    ])
+                    ->sortable(),
                 Tables\Columns\TextColumn::make('created_at')
+                    ->label('Dibuat Pada')
                     ->dateTime()
-                    ->sortable()
-                    ->toggleable(isToggledHiddenByDefault: true),
+                    ->sortable(),
                 Tables\Columns\TextColumn::make('updated_at')
                     ->dateTime()
                     ->sortable()
                     ->toggleable(isToggledHiddenByDefault: true),
             ])
-            ->filters([
-                //
-            ])
+            ->filters([])
             ->actions([
                 Tables\Actions\EditAction::make(),
+                Tables\Actions\DeleteAction::make(),
             ])
             ->bulkActions([
                 Tables\Actions\BulkActionGroup::make([
@@ -83,9 +119,7 @@ class BookingResource extends Resource
 
     public static function getRelations(): array
     {
-        return [
-            //
-        ];
+        return [];
     }
 
     public static function getPages(): array

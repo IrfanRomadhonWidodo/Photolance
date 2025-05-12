@@ -114,7 +114,7 @@ class BookingController extends Controller
         }
 
         if ($conflict) {
-            return back()->with('error', 'One or more of your selected time slots are already booked. Please select different time slots.');
+            return back()->with('error', 'Satu atau beberapa slot waktu yang Anda pilih sudah dipesan. Silakan pilih slot waktu yang berbeda.');
         }
 
         // Create the booking

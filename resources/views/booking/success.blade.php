@@ -21,7 +21,7 @@
                         
                         <div class="mt-8 flex justify-center">
                             <a href="{{ route('booking.dashboard_booking') }}" class="px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600">
-                                View Your Bookings
+                                Lanjutkan ke Pembayaran
                             </a>                      
                         </div>
                     </div>

@@ -20,7 +20,7 @@
                         <p class="mt-2 text-gray-600">Your photography session has been booked successfully.</p>
                         
                         <div class="mt-8 flex justify-center">
-                            <a href="{{ route('booking.dashboard_booking') }}" class="px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600">
+                            <a href="{{ route('payment.dashboard') }}" class="px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600">
                                 Lanjutkan ke Pembayaran
                             </a>                      
                         </div>

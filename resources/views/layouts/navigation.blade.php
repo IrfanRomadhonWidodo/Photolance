@@ -34,6 +34,12 @@
                 <x-dropdown-link :href="route('profile.edit')">
                     {{ __('Profile') }}
                 </x-dropdown-link>
+                <x-dropdown-link :href="route('payment.dashboard')">
+                    {{ __('Payment') }}
+                </x-dropdown-link>
+                                <x-dropdown-link :href="route('booking.dashboard_booking')">
+                    {{ __('Booking') }}
+                </x-dropdown-link>
                 <form method="POST" action="{{ route('logout') }}">
                     @csrf
                     <x-dropdown-link :href="route('logout')" onclick="event.preventDefault(); this.closest('form').submit();">
@@ -56,10 +62,10 @@
         <button @click="open = false" class="text-white text-2xl mb-4">&times;</button>
         <ul class="space-y-3 text-sm font-medium">
             <li><a href="{{ route('dashboard') }}" class="block py-2 px-3 rounded-lg hover:bg-blue-800 transition">Home</a></li>
-            <li><a href="#" class="block py-2 px-3 rounded-lg hover:bg-blue-800 transition">Galeri</a></li>
-            <li><a href="#" class="block py-2 px-3 rounded-lg hover:bg-blue-800 transition">Layanan</a></li>
-            <li><a href="#" class="block py-2 px-3 rounded-lg hover:bg-blue-800 transition">Booking</a></li>
-            <li><a href="#" class="block py-2 px-3 rounded-lg hover:bg-blue-800 transition">Tentang Kami</a></li>
+            <li><a href="{{ route('dashboard') }}#portofolio" class="block py-2 px-3 rounded-lg hover:bg-blue-800 transition">Galeri</a></li>
+            <li><a href="{{ route('dashboard') }}#booking" class="block py-2 px-3 rounded-lg hover:bg-blue-800 transition">Booking</a></li>
+            <li><a href="{{ route('dashboard') }}#layanan" class="block py-2 px-3 rounded-lg hover:bg-blue-800 transition">Layanan</a></li>
+            <li><a href="{{ route('dashboard') }}#tentangkami" class="block py-2 px-3 rounded-lg hover:bg-blue-800 transition">Tentang Kami</a></li>
         </ul>
         
 

@@ -17,6 +17,10 @@ class BookingResource extends Resource
 
     protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
 
+    protected static ?string $navigationGroup = 'Operasional';
+
+    protected static ?string $navigationLabel = 'Booking';
+
     public static function form(Form $form): Form
     {
         // Generate time slots from 08:00 - 19:00

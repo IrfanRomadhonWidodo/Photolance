@@ -86,9 +86,9 @@
                                             </td>
                                             <td class="px-6 py-4 whitespace-nowrap">
                                                 <span class="px-3 py-1 inline-flex text-xs leading-5 font-semibold rounded-full 
-                                                    @if($booking->status == 'confirmed') bg-green-100 text-green-800
+                                                    @if($booking->status == 'confirmed') bg-blue-100 text-blue-800
                                                     @elseif($booking->status == 'pending') bg-yellow-100 text-yellow-800
-                                                    @elseif($booking->status == 'completed') bg-blue-100 text-blue-800
+                                                    @elseif($booking->status == 'completed') bg-green-100 text-green-800
                                                     @else bg-red-100 text-red-800 @endif">
                                                     {{ ucfirst($booking->status) }}
                                                 </span>

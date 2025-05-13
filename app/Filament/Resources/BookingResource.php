@@ -91,7 +91,7 @@ class BookingResource extends Resource
                 Tables\Columns\BadgeColumn::make('status')
                     ->colors([
                         'warning' => 'pending',
-                        'primary' => 'confirmed', 
+                        'info' => 'confirmed', 
                         'success' => 'completed',
                         'danger' => 'cancelled',
                     ])
@@ -107,11 +107,55 @@ class BookingResource extends Resource
             ])
             ->filters([])
             ->actions([
-                Tables\Actions\EditAction::make(),
-                Tables\Actions\DeleteAction::make(),
+                Tables\Actions\ViewAction::make()
+                    ->modalHeading('View Booking Details'),
+                // Tables\Actions\EditAction::make()
+                //     ->modalHeading('Edit Booking')
+                //     ->modalDescription('Update booking information below')
+                //     ->modalSubmitActionLabel('Save changes')
+                //     ->successNotificationTitle('Booking updated successfully'),
+                Tables\Actions\Action::make('updateStatus')
+                    ->icon('heroicon-o-arrow-path')
+                    ->color('success')
+                    ->form([
+                        Forms\Components\Select::make('status')
+                            ->options([
+                                'pending' => 'Pending',
+                                'confirmed' => 'Confirmed',
+                                'completed' => 'Completed',
+                                'cancelled' => 'Cancelled',
+                            ])
+                            ->required(),
+                    ])
+                    ->action(function (Booking $record, array $data): void {
+                        $record->update([
+                            'status' => $data['status'],
+                        ]);
+                    })
+                    ->successNotificationTitle('Booking status updated'),
+                Tables\Actions\DeleteAction::make()
+                    ->successNotificationTitle('Booking deleted successfully'),
             ])
             ->bulkActions([
                 Tables\Actions\BulkActionGroup::make([
+                    Tables\Actions\BulkAction::make('updateStatus')
+                        ->icon('heroicon-o-arrow-path')
+                        ->form([
+                            Forms\Components\Select::make('status')
+                                ->options([
+                                    'pending' => 'Pending',
+                                    'confirmed' => 'Confirmed',
+                                    'completed' => 'Completed',
+                                    'cancelled' => 'Cancelled',
+                                ])
+                                ->required(),
+                        ])
+                        ->action(function ($records, array $data): void {
+                            foreach ($records as $record) {
+                                $record->update(['status' => $data['status']]);
+                            }
+                        })
+                        ->successNotificationTitle('Bookings status updated'),
                     Tables\Actions\DeleteBulkAction::make(),
                 ]),
             ]);
@@ -127,7 +171,7 @@ class BookingResource extends Resource
         return [
             'index' => Pages\ListBookings::route('/'),
             'create' => Pages\CreateBooking::route('/create'),
-            'edit' => Pages\EditBooking::route('/{record}/edit'),
+            // 'edit' => Pages\EditBooking::route('/{record}/edit'),
         ];
     }
 }

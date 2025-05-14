@@ -31,7 +31,7 @@
             <!-- Booking Sukses Card -->
             <div class="bg-white/10 backdrop-blur-md p-8 rounded-2xl shadow-lg hover:shadow-xl transform transition duration-300 hover:scale-105">
                 <div class="text-5xl font-extrabold mb-2 text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-blue-600">
-                    
+                    {{ $jumlahBookingSukses }}
                 </div>
                 <div class="text-blue-100 text-2xl">Booking Sukses</div>
             </div>

@@ -49,7 +49,7 @@
         <li><a href="#tentangkami" class="hover:text-blue-500">Tentang Kami</a></li>
     </ul>
     <div class="hidden md:flex items-center space-x-4">
-        <a href="{{ route('login') }}" class="border border-blue-900 text-blue-900 px-4 py-1 rounded-full hover:bg-blue-900 hover:text-white text-sm">
+        <a href="{{ route(name: 'login') }}" class="border border-blue-900 text-blue-900 px-4 py-1 rounded-full hover:bg-blue-900 hover:text-white text-sm">
             Login
         </a>
         <a href="{{ route('register') }}" class="bg-blue-900 text-white px-4 py-1 rounded-full hover:bg-blue-800 text-sm">

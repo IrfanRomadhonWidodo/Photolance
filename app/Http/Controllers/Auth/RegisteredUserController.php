@@ -11,6 +11,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Validation\Rules;
 use Illuminate\View\View;
+use Illuminate\Support\Str; // 1. Tambahkan ini
 
 class RegisteredUserController extends Controller
 {
@@ -35,10 +36,14 @@ class RegisteredUserController extends Controller
             'password' => ['required', 'confirmed', Rules\Password::defaults()],
         ]);
 
+        // 2. Tentukan peran berdasarkan domain email
+        $role = Str::endsWith($request->email, '@photo.ac.id') ? 'admin' : 'user';
+
         $user = User::create([
             'name' => $request->name,
             'email' => $request->email,
             'password' => Hash::make($request->password),
+            'role' => $role, // 3. Tambahkan peran di sini
         ]);
 
         event(new Registered($user));

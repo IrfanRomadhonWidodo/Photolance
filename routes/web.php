@@ -6,30 +6,26 @@ use App\Http\Controllers\EmployeeController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\BookingController;
 use App\Http\Controllers\PaymentController;
+use App\Http\Controllers\TentangKamiController;
+// Ditambahkan untuk rute logout
+use App\Http\Controllers\Auth\AuthenticatedSessionController;
 
-Route::get('/', function () {
-    return view('home');
-});
+/*
+|--------------------------------------------------------------------------
+| Web Routes
+|--------------------------------------------------------------------------
+*/
 
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
+// Rute utama ('/') akan menjalankan TentangKamiController dan diberi nama 'home'.
+Route::get('/', [TentangKamiController::class, 'index2'])->name('home');
 
+// Rute untuk dasbor pengguna biasa.
+Route::get('/dashboard', [TentangKamiController::class, 'index'])->middleware(['auth', 'verified'])->name('dashboard');
 
 //Untuk Form Employee 
-Route::post('/employees', [App\Http\Controllers\EmployeeController::class, 'store'])->name('employees.store')->middleware('auth');
+Route::post('/employees', [EmployeeController::class, 'store'])->name('employees.store')->middleware('auth');
 
-//Untuk Tentang Kami Bagian cacah
-Route::get('/dashboard', [App\Http\Controllers\TentangKamiController::class, 'index'])->name('dashboard');
-Route::get('/home', [App\Http\Controllers\TentangKamiController::class, 'index2'])->name('home');
-Route::get('/', [App\Http\Controllers\TentangKamiController::class, 'index2']);
-
-//Booking
-Route::get('/booking-dashboard_booking', function () {
-    return view('booking.dashboard_booking');
-})->name('booking.dashboard_booking');
-
-
+// Rute untuk Booking
 Route::prefix('dashboard')->middleware(['auth'])->group(function () {
     Route::get('/dashboard_booking', [BookingController::class, 'index'])->name('booking.dashboard_booking');
     Route::get('/booking/create', [BookingController::class, 'create'])->name('booking.create');
@@ -38,7 +34,7 @@ Route::prefix('dashboard')->middleware(['auth'])->group(function () {
     Route::get('/booking/success', [BookingController::class, 'success'])->name('booking.success');
 });
 
-
+// Rute untuk Pembayaran
 Route::prefix('payment')->name('payment.')->group(function () {
     Route::get('/dashboard', [PaymentController::class, 'dashboard'])->name('dashboard');
     Route::get('/{booking}', [PaymentController::class, 'show'])->name('show');
@@ -47,9 +43,11 @@ Route::prefix('payment')->name('payment.')->group(function () {
 });
 
 
+// --- PERUBAHAN DI SINI ---
+// Kita mendefinisikan rute yang akan digunakan oleh tombol "Sign Out" bawaan Filament.
+// Ini menimpa perilaku logout default Filament.
+Route::post('admin/logout', [AuthenticatedSessionController::class, 'destroy'])
+    ->name('filament.admin.auth.logout');
 
-
-
+// Rute untuk Autentikasi
 require __DIR__ . '/auth.php';
-
-

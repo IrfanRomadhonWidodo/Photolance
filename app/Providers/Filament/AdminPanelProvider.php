@@ -27,6 +27,13 @@ class AdminPanelProvider extends PanelProvider
             ->id('admin')
             ->path('admin')
             ->login()
+            
+            // --- PERUBAHAN DI SINI ---
+            // SEMUA konfigurasi logout kustom (`logoutUrl` dan `userMenuItems`)
+            // telah dihapus agar Filament menggunakan tombol "Sign Out" bawaannya.
+            // Tombol ini akan secara otomatis menggunakan rute 'filament.admin.auth.logout'
+            // yang telah kita definisikan di web.php.
+
             ->colors([
                 'primary' => Color::Amber,
             ])

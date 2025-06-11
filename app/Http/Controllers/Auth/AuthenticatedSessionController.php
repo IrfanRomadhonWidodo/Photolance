@@ -26,23 +26,14 @@ class AuthenticatedSessionController extends Controller
     public function store(LoginRequest $request): RedirectResponse
     {
         $request->authenticate();
-
         $request->session()->regenerate();
+        $user = Auth::user();
 
-        $user = Auth::user(); // Dapatkan data pengguna yang sedang login
-
-        // Cek apakah peran adalah 'admin' ATAU email berakhiran '@photo.ac.id'
         if ($user->role === 'admin' || Str::endsWith($user->email, '@photo.ac.id')) {
-            
-            // Jika ya, alihkan ke dasbor Filament
-             return redirect()->route('filament.admin.pages.dashboard');
-
+            return redirect()->route('filament.admin.pages.dashboard');
         } else {
-
-            // Jika tidak, alihkan ke dasbor pengguna biasa
             return redirect()->route('dashboard');
         }
-    
     }
 
     /**
@@ -51,11 +42,12 @@ class AuthenticatedSessionController extends Controller
     public function destroy(Request $request): RedirectResponse
     {
         Auth::guard('web')->logout();
-
         $request->session()->invalidate();
-
         $request->session()->regenerateToken();
 
-        return redirect('/');
+        // --- PERUBAHAN DI SINI ---
+        // Mengarahkan ke rute bernama 'home' setelah logout.
+        // Ini lebih baik daripada hard-coding URL '/'.
+        return redirect()->route('home');
     }
 }

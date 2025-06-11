@@ -14,11 +14,11 @@
                 @csrf
                 <div class="mb-4">
                     <input type="email" id="email" name="email" placeholder="Enter your email" required 
-                        class="w-full p-3 rounded-lg bg-white/20 text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-white">
+                           class="w-full p-3 rounded-lg bg-white/20 text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-white">
                 </div>
                 <div class="mb-4">
                     <input type="password" id="password" name="password" placeholder="Enter your password" required 
-                        class="w-full p-3 rounded-lg bg-white/20 text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-white">
+                           class="w-full p-3 rounded-lg bg-white/20 text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-white">
                 </div>
                 <div class="flex items-center justify-between mb-6 text-white text-sm">
                     <div>
@@ -31,6 +31,14 @@
                 </div>
                 <button type="submit" class="w-full bg-indigo-600 hover:bg-indigo-700 text-white py-3 rounded-lg transition duration-200">Log In</button>
             </form>
+            
+            <div class="text-center text-white text-sm mt-6">
+                Don't have an account? 
+                <a href="{{ route('register') }}" class="font-semibold hover:underline">
+                    Register
+                </a>
+            </div>
+            
         </div>
     </div>
 </body>

@@ -42,9 +42,6 @@ class Booking extends Model
         return $this->hasOne(Payment::class);
     }
 
-    /**
-     * Calculate the total price based on the number of time slots.
-     */
     public function calculatePrice(): float
     {
         $slotsCount = count($this->time_slots);

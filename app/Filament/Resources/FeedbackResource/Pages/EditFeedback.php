@@ -17,8 +17,9 @@ class EditFeedback extends EditRecord
         ];
     }
 
-        protected function getRedirectUrl(): string
-{
-    return $this->getResource()::getUrl('index'); // Redirect ke list user
-}
+    protected function getRedirectUrl(): string
+    {
+    return $this->getResource()::getUrl('index');
+
+    }
 }

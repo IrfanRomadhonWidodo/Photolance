@@ -1,4 +1,4 @@
-<!-- Navbar -->
+
 <nav class="fixed w-full bg-white shadow-md py-4 px-8 flex justify-between items-center z-50">
     <div class="flex items-center space-x-3">
         <img src="{{ asset('img/logo.png') }}" alt="Logo" class="w-11 h-11">
@@ -6,14 +6,6 @@
             <span class="text-blue-400">Photo</span><span class="text-blue-900">Lance</span>
         </div>
     </div>
-    
-    <!-- Search Bar -->
-    {{-- <div class="hidden md:flex items-center bg-gray-200 rounded-full px-4 py-2">
-        <input type="text" placeholder="Search..." class="bg-transparent focus:outline-none px-2">
-        <button class="text-gray-600">
-            <img src="{{ asset('img/search.png') }}" alt="Search" class="w-4 h-4">
-        </button>
-    </div>         --}}
     
     <!-- Menu Button for Mobile -->
     <button id="menu-btn" class="block md:hidden text-2xl">☰</button>

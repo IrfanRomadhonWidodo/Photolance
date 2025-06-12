@@ -28,11 +28,11 @@ class EmployeeResource extends Resource
                 Forms\Components\FileUpload::make('image')
                     ->label('Foto Profil')
                     ->image()
-                    ->directory('employee-photos') // folder di storage/app/public
+                    ->directory('employee-photos')
                     ->visibility('public')
                     ->imagePreviewHeight('100')
-                    ->maxSize(1024) // 1MB
-                    ->disk('public') // Pastikan menggunakan disk 'public'
+                    ->maxSize(1024) 
+                    ->disk('public')
                     ->nullable(),
 
                 Forms\Components\TextInput::make('name')

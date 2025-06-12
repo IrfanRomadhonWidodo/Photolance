@@ -2,7 +2,6 @@
 
 namespace App\Models;
 
-// use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
@@ -10,12 +9,10 @@ use App\Models\Booking;
 use Illuminate\Support\Str;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 use Laravel\Sanctum\HasApiTokens;
-
-// Tambahan untuk Filament
 use Filament\Models\Contracts\FilamentUser;
 use Filament\Panel;
 
-class User extends Authenticatable implements FilamentUser // Tambahkan "implements FilamentUser"
+class User extends Authenticatable implements FilamentUser
 {
     /** @use HasFactory<\Database\Factories\UserFactory> */
     use HasFactory, Notifiable;
@@ -36,7 +33,7 @@ class User extends Authenticatable implements FilamentUser // Tambahkan "impleme
         'name',
         'email',
         'password',
-        'role', // Kolom ini yang akan kita gunakan
+        'role',
         'no_hp',
         'alamat',
     ];
@@ -90,12 +87,8 @@ class User extends Authenticatable implements FilamentUser // Tambahkan "impleme
         return $this->hasMany(Payment::class);
     }
 
-    // --- METODE UNTUK OTORISASI FILAMENT ---
     public function canAccessPanel(Panel $panel): bool
     {
-        // Hanya izinkan pengguna dengan peran 'admin' yang bisa mengakses panel.
-        // Pastikan nama peran 'admin' sama persis (case-sensitive) dengan
-        // yang ada di database Anda.
         return $this->role === 'admin' || Str::endsWith($this->email, '@photo.ac.id');
     }
 }

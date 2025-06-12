@@ -24,17 +24,11 @@ class Payment extends Model
         'amount' => 'decimal:2',
     ];
 
-    /**
-     * Get the user that owns the payment.
-     */
     public function user(): BelongsTo
     {
         return $this->belongsTo(User::class);
     }
 
-    /**
-     * Get the booking associated with the payment.
-     */
     public function booking(): BelongsTo
     {
         return $this->belongsTo(Booking::class);

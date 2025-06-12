@@ -1,5 +1,5 @@
 <nav x-data="{ open: false }" class="fixed w-full bg-white shadow-md py-4 px-8 flex justify-between items-center z-50">
-    <!-- Logo -->
+    
     <div class="flex items-center space-x-3">
         <img src="{{ asset('img/logo.png') }}" alt="Logo" class="w-11 h-11">
         <div class="text-2xl font-bold" style="font-family: 'Raleway', sans-serif;">
@@ -7,7 +7,6 @@
         </div>
     </div>
 
-    <!-- Navigation Links (Desktop) -->
     <ul class="hidden md:flex space-x-6 text-blue-900 font-medium">
         <li><a href="{{ route('dashboard') }}" class="hover:text-blue-500 {{ request()->routeIs('dashboard') ? 'text-blue-900' : '' }}">Home</a></li>
         <li><a href="{{ route('dashboard') }}#portofolio" class="hover:text-blue-500">Galeri</a></li>
@@ -16,7 +15,6 @@
         <li><a href="{{ route('dashboard') }}#tentangkami" class="hover:text-blue-500">Tentang Kami</a></li>
     </ul>
 
-    <!-- User Dropdown -->
     <div class="hidden sm:flex sm:items-center sm:ms-6">
         <x-dropdown align="right" width="48">
             <x-slot name="trigger">
@@ -68,7 +66,6 @@
         </x-dropdown>
     </div>
 
-    <!-- Mobile Menu Button -->
     <button @click="open = !open" class="block md:hidden text-2xl focus:outline-none">
         ☰
     </button>

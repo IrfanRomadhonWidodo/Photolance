@@ -13,9 +13,7 @@
                 </svg>
             </button>
             
-            <!-- Scrollable container -->
             <div class="overflow-x-auto flex gap-4 pb-6 px-4 scrollbar-hide snap-x snap-mandatory">
-                <!-- 1. Pre-Wedding -->
                 <div class="snap-start flex-none w-64 bg-blue-100 rounded-lg shadow-md hover:shadow-xl transition-shadow">
                     <div class="p-6 flex flex-col items-center text-center">
                         <div class="w-16 h-16 flex items-center justify-center mb-4">
@@ -29,7 +27,6 @@
                     </div>
                 </div>
                 
-                <!-- 2. Wedding -->
                 <div class="snap-start flex-none w-64 bg-blue-100 rounded-lg shadow-md hover:shadow-xl transition-shadow">
                     <div class="p-6 flex flex-col items-center text-center">
                         <div class="w-16 h-16 flex items-center justify-center mb-4">
@@ -43,7 +40,6 @@
                     </div>
                 </div>
                 
-                <!-- 3. Family -->
                 <div class="snap-start flex-none w-64 bg-blue-100 rounded-lg shadow-md hover:shadow-xl transition-shadow">
                     <div class="p-6 flex flex-col items-center text-center">
                         <div class="w-16 h-16 flex items-center justify-center mb-4">
@@ -59,7 +55,6 @@
                     </div>
                 </div>
                 
-                <!-- 4. Portrait -->
                 <div class="snap-start flex-none w-64 bg-blue-100 rounded-lg shadow-md hover:shadow-xl transition-shadow">
                     <div class="p-6 flex flex-col items-center text-center">
                         <div class="w-16 h-16 flex items-center justify-center mb-4">

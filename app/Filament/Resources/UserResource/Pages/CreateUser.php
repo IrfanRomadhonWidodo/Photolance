@@ -12,7 +12,7 @@ class CreateUser extends CreateRecord
 
     protected function getRedirectUrl(): string
 {
-    return $this->getResource()::getUrl('index'); // Redirect ke list user
+    return $this->getResource()::getUrl('index'); 
 }
 
 }

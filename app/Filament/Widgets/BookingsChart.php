@@ -12,7 +12,7 @@ class BookingsChart extends ChartWidget
 {
     protected static ?string $heading = 'Bookings Trends';
     protected static ?int $sort = 2;
-    protected static ?string $pollingInterval = '30s'; // Refresh every 30 seconds
+    protected static ?string $pollingInterval = '30s'; 
     
     protected function getType(): string
     {
@@ -21,7 +21,6 @@ class BookingsChart extends ChartWidget
     
     protected function getData(): array
     {
-        // Get data for the last 7 days
         $data = $this->getBookingDataForLastDays(7);
         
         return [

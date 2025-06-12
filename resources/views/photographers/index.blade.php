@@ -1,6 +1,5 @@
-<!-- photographers/index.blade.php -->
+
 @php
-    // Mengambil data photographer yang statusnya approved
     $photographers = \App\Models\Employee::where('kategori', 'photographer')->where('status', 'approved')->get();
 @endphp
 

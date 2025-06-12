@@ -17,18 +17,13 @@ class AuthServiceProvider extends ServiceProvider
      * @var array<class-string, class-string>
      */
     protected $policies = [
-        // Add these two lines to your existing policies array
         Booking::class => BookingPolicy::class,
         Payment::class => PaymentPolicy::class,
     ];
 
-    /**
-     * Register any authentication / authorization services.
-     */
     public function boot(): void
     {
         $this->registerPolicies();
 
-        // You can add any additional Gate definitions here if needed
     }
 }

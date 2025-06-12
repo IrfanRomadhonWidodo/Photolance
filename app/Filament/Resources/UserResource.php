@@ -33,20 +33,20 @@ class UserResource extends Resource
                     ->label('Email')
                     ->email()
                     ->required()
-                    ->unique(User::class, 'email', ignoreRecord: true), // Abaikan email user sendiri                
+                    ->unique(User::class, 'email', ignoreRecord: true),                
 
                     Forms\Components\TextInput::make('password')
                     ->label('Password')
                     ->password()
-                    ->dehydrated(fn($state) => !empty($state)) // Hanya simpan jika diisi
+                    ->dehydrated(fn($state) => !empty($state)) 
                     ->required(fn($context) => $context === 'create')
                     ->maxLength(255)
-                    ->placeholder('******') // Agar tampil sebagai "******" saat edit
+                    ->placeholder('******')
                     ->afterStateHydrated(fn ($state, callable $set) => $set('password', '')),
                 
                     Forms\Components\TextInput::make('no_hp')
                     ->label('No. HP')
-                    ->tel() // Format nomor telepon
+                    ->tel()
                     ->maxLength(15),
 
                     Forms\Components\Textarea::make('alamat')
@@ -73,11 +73,11 @@ class UserResource extends Resource
             ->columns([
                 Tables\Columns\TextColumn::make('name')
                     ->label('Nama')
-                    ->searchable(), // Menambahkan pencarian pada nama
+                    ->searchable(), 
 
                 Tables\Columns\TextColumn::make('email')
                     ->label('Email')
-                    ->searchable(), // Menambahkan pencarian pada email
+                    ->searchable(), 
 
                 Tables\Columns\TextColumn::make('role')
                     ->label('Peran')
@@ -94,13 +94,13 @@ class UserResource extends Resource
     
                 Tables\Columns\TextColumn::make('alamat')
                     ->label('Alamat')
-                    ->limit(50) // Batasi tampilan teks panjang
+                    ->limit(50) 
                     ->tooltip(fn ($record) => $record->alamat), // Tampilkan tooltip jika teks terlalu panjang
     
                 Tables\Columns\TextColumn::make('created_at')
                     ->label('Dibuat')
                     ->dateTime('d M Y H:i')
-                    ->sortable(), // Bisa diurutkan berdasarkan waktu
+                    ->sortable(), 
             ])
             ->filters([
                 Tables\Filters\SelectFilter::make('role')

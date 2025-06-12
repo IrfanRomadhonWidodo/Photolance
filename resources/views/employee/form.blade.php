@@ -1,14 +1,12 @@
 <!-- Employee Registration Modal -->
 <div id="employeeRegistrationModal" class="fixed inset-0 z-50 hidden overflow-auto bg-black bg-opacity-50 flex items-center justify-center p-4">
     <div class="bg-white rounded-lg shadow-xl w-full max-w-3xl transform transition-all">
-        <!-- Modal Content -->
+
         <div class="flex flex-col md:flex-row">
-            <!-- Image Section (Left side) - Reduced height -->
             <div class="md:w-2/5 relative h-48 md:h-auto">
                 <img src="{{ asset('img/formemployee.png') }}" alt="Form Employee Image" class="w-full h-full object-cover rounded-l-lg">
             </div>
-            
-            <!-- Form Section (Right side) - Compact spacing -->
+        
             <div class="md:w-3/5 p-7">
                 <div class="mb-3">
                     <h2 class="text-xl font-bold text-gray-800">Pendaftaran Mitra Photolance</h2>
@@ -18,19 +16,16 @@
                 <form action="{{ route('employees.store') }}" method="POST">
                     @csrf
                     
-                    <!-- Name Field - Reduced vertical spacing -->
                     <div class="mb-3">
                         <label for="name" class="block text-sm font-medium text-gray-700 mb-1">Nama Lengkap</label>
                         <input type="text" name="name" id="name" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500" required>
                     </div>
                     
-                    <!-- Email Field - Reduced vertical spacing -->
                     <div class="mb-3">
                         <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email</label>
                         <input type="email" name="email" id="email" value="{{ auth()->user()->email }}" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 bg-gray-50" readonly>
                     </div>
                     
-                    <!-- Category Field - Reduced vertical spacing -->
                     <div class="mb-3">
                         <label for="kategori" class="block text-sm font-medium text-gray-700 mb-1">Kategori</label>
                         <div class="relative">
@@ -47,17 +42,14 @@
                         </div>
                     </div>
                     
-                    <!-- Portfolio Field - Reduced vertical spacing -->
                     <div class="mb-3">
                         <label for="portofolio" class="block text-sm font-medium text-gray-700 mb-1">Link Portofolio</label>
                         <input type="url" name="portofolio" id="portofolio" placeholder="https://portfolio-example.com" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
                         <p class="text-xs text-gray-500 mt-0.5">Masukkan link portofolio/sosial media anda</p>
                     </div>
                     
-                    <!-- Hidden User ID Field -->
                     <input type="hidden" name="user_id" value="{{ auth()->id() }}">
                     
-                    <!-- Submit Button - Reduced vertical spacing -->
                     <div class="mt-4">
                         <button type="submit" class="w-full px-3 py-2 bg-gradient-to-r from-blue-700 to-blue-500 text-white font-medium rounded-md hover:from-blue-800 hover:to-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition-colors duration-300 shadow-md">
                             Daftar Sekarang
@@ -65,7 +57,6 @@
                     </div>
                 </form>
                 
-                <!-- Close Button -->
                 <div class="absolute top-3 right-3">
                     <button type="button" class="text-gray-400 hover:text-gray-600 focus:outline-none" onclick="closeEmployeeModal()">
                         <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -78,7 +69,6 @@
     </div>
 </div>
 
-<!-- Modal JavaScript -->
 <script>
     function openEmployeeModal() {
         document.getElementById('employeeRegistrationModal').classList.remove('hidden');
@@ -90,7 +80,6 @@
         document.body.classList.remove('overflow-hidden');
     }
     
-    // Close modal when clicking outside the modal content
     document.getElementById('employeeRegistrationModal').addEventListener('click', function(event) {
         if (event.target === this) {
             closeEmployeeModal();

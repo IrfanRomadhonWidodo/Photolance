@@ -12,10 +12,8 @@ class BookingController extends Controller
 {
     public function index()
     {
-            // Dapatkan ID user yang sedang login
     $userId = Auth::id();
     
-    // Query langsung ke model Booking dengan kondisi user_id
     $bookings = Booking::where('user_id', $userId)
                        ->with('employee')
                        ->get();
@@ -39,7 +37,6 @@ class BookingController extends Controller
             'Foto Korporat'
         ];
         
-        // Generate time slots from 08:00 to 19:00
         $timeSlots = [];
         for ($hour = 8; $hour < 19; $hour++) {
             $start = sprintf('%02d:00', $hour);
@@ -63,12 +60,10 @@ class BookingController extends Controller
         $date = $request->date;
         $photographerId = $request->photographer_id;
 
-        // Get all bookings for this photographer on the selected date
         $bookings = Booking::where('employee_id', $photographerId)
             ->where('booking_date', $date)
             ->get();
 
-        // Collect all booked time slots
         $bookedSlots = [];
         foreach ($bookings as $booking) {
             $bookedSlots = array_merge($bookedSlots, $booking->time_slots);
@@ -90,7 +85,6 @@ class BookingController extends Controller
             'notes' => 'nullable|string',
         ]);
 
-        // Check if the time slots are already booked
         $date = $request->booking_date;
         $photographerId = $request->photographer_id;
         $selectedSlots = $request->time_slots;
@@ -104,7 +98,6 @@ class BookingController extends Controller
             $bookedSlots = array_merge($bookedSlots, $booking->time_slots);
         }
 
-        // Check for any overlap
         $conflict = false;
         foreach ($selectedSlots as $slot) {
             if (in_array($slot, $bookedSlots)) {

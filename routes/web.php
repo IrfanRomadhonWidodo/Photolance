@@ -7,7 +7,6 @@ use App\Http\Controllers\UserController;
 use App\Http\Controllers\BookingController;
 use App\Http\Controllers\PaymentController;
 use App\Http\Controllers\TentangKamiController;
-// Ditambahkan untuk rute logout
 use App\Http\Controllers\Auth\AuthenticatedSessionController;
 
 /*
@@ -42,10 +41,7 @@ Route::prefix('payment')->name('payment.')->group(function () {
     Route::get('/{payment}/complete', [PaymentController::class, 'complete'])->name('complete');
 });
 
-
-// --- PERUBAHAN DI SINI ---
-// Kita mendefinisikan rute yang akan digunakan oleh tombol "Sign Out" bawaan Filament.
-// Ini menimpa perilaku logout default Filament.
+// Log Out Filament
 Route::post('admin/logout', [AuthenticatedSessionController::class, 'destroy'])
     ->name('filament.admin.auth.logout');
 

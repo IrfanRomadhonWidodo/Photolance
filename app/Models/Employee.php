@@ -10,9 +10,9 @@ class Employee extends Model
 {
     use HasFactory;
 
-    protected $primaryKey = 'id'; // Gunakan id sebagai primary key
-    public $incrementing = false; // Matikan auto-increment default Laravel
-    protected $keyType = 'string'; // ID berupa string
+    protected $primaryKey = 'id'; 
+    public $incrementing = false; 
+    protected $keyType = 'string';
 
     protected $fillable = [
         'name',
@@ -34,7 +34,6 @@ class Employee extends Model
         return $this->hasMany(Booking::class);
     }
     
-    // Scope to get only approved photographers
     public function scopeApproved($query)
     {
         return $query->where('status', 'approved');

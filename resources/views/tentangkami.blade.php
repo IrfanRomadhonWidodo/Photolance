@@ -20,7 +20,6 @@
     <div class="container mx-auto px-6 py-8">
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
             
-            <!-- Employee Card -->
             <div class="bg-white/10 backdrop-blur-md p-8 rounded-2xl shadow-lg hover:shadow-xl transform transition duration-300 hover:scale-105">
                 <div class="text-5xl font-extrabold mb-2 text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-blue-600">
                     {{ $jumlahEmployee }}
@@ -28,7 +27,6 @@
                 <div class="text-blue-100 text-2xl">Employee</div>
             </div>
 
-            <!-- Booking Sukses Card -->
             <div class="bg-white/10 backdrop-blur-md p-8 rounded-2xl shadow-lg hover:shadow-xl transform transition duration-300 hover:scale-105">
                 <div class="text-5xl font-extrabold mb-2 text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-blue-600">
                     {{ $jumlahBookingSukses }}
@@ -36,7 +34,6 @@
                 <div class="text-blue-100 text-2xl">Booking Sukses</div>
             </div>
 
-            <!-- User Aktif Card -->
             <div class="bg-white/10 backdrop-blur-md p-8 rounded-2xl shadow-lg hover:shadow-xl transform transition duration-300 hover:scale-105">
                 <div class="text-5xl font-extrabold mb-2 text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-blue-600">
                     {{ $jumlahUser }}
@@ -47,9 +44,6 @@
     </div>
 </section>
 
-
-
-<!-- Mission Section -->
 <section class="py-16 bg-white">
     <div class="container mx-auto px-4">
         <div class="max-w-4xl mx-auto">
@@ -88,7 +82,6 @@
     </div>
 </section>
 
-<!-- About Section -->
 <section class="py-16 bg-blue-50">
     <div class="container mx-auto px-4">
         <div class="max-w-4xl mx-auto">
@@ -164,8 +157,6 @@
 </section>
 
 
-
-<!-- Team Section -->
 <section class="py-16 bg-white">
     <div class="container mx-auto px-4">
         <div class="max-w-5xl mx-auto">
@@ -193,14 +184,12 @@
                                 </svg>
                             </a>
                             <div class="flex space-x-4">
-                                <!-- Facebook Icon -->
                                 <a href="https://www.facebook.com/irfan.romadhon.12327/?locale=id_ID" target="_blank" class="text-blue-500 hover:text-blue-700">
                                     <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                                         <path d="M22 12.073C22 6.545 17.523 2 12 2S2 6.545 2 12.073c0 5.056 3.738 9.245 8.56 9.927v-7.02h-2.58v-2.907h2.58V9.413c0-2.564 1.51-3.977 3.822-3.977 1.108 0 2.27.198 2.27.198v2.5h-1.279c-1.262 0-1.656.785-1.656 1.588v1.902h2.809l-.449 2.907h-2.36v7.02C18.262 21.318 22 17.13 22 12.073z"/>
                                     </svg>
                                 </a>
 
-                                <!-- GitHub Icon -->
                                 <a href="https://github.com/IrfanRomadhonWidodo" target="_blank" class="text-blue-500 hover:text-blue-700">
                                     <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                                         <path d="M12 0C5.373 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.6.11.793-.26.793-.577 0-.285-.01-1.04-.016-2.04-3.338.727-4.042-1.614-4.042-1.614-.546-1.386-1.333-1.756-1.333-1.756-1.089-.744.083-.729.083-.729 1.205.085 1.838 1.238 1.838 1.238 1.07 1.833 2.809 1.303 3.495.996.107-.775.418-1.303.762-1.603-2.665-.305-5.467-1.335-5.467-5.932 0-1.31.468-2.381 1.236-3.22-.123-.304-.536-1.528.117-3.184 0 0 1.008-.322 3.302 1.23a11.51 11.51 0 013.006-.404c1.02.005 2.046.138 3.006.404 2.294-1.552 3.301-1.23 3.301-1.23.653 1.656.24 2.88.118 3.184.77.839 1.236 1.91 1.236 3.22 0 4.61-2.807 5.624-5.479 5.921.43.372.814 1.103.814 2.222 0 1.605-.014 2.898-.014 3.293 0 .319.192.694.801.576C20.565 21.797 24 17.302 24 12c0-6.627-5.373-12-12-12z"/>
@@ -211,7 +200,6 @@
                     </div>
                 </div>
                 
-                <!-- Team Member 2 -->
                 <div class="bg-blue-50 rounded-xl overflow-hidden shadow-md hover:shadow-lg transition-shadow duration-300 group">
                     <div class="relative overflow-hidden">
                         <img src="{{ asset('img/anggota2.png') }}" alt="Anggota Tim 2" class="w-full h-64 object-cover object-center transition-transform duration-500 group-hover:scale-105">
@@ -228,14 +216,12 @@
                                 </svg>
                             </a>
                             <div class="flex space-x-4">
-                                <!-- Facebook Icon -->
                                 <a href="https://www.facebook.com/irfan.romadhon.12327/?locale=id_ID" target="_blank" class="text-blue-500 hover:text-blue-700">
                                     <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                                         <path d="M22 12.073C22 6.545 17.523 2 12 2S2 6.545 2 12.073c0 5.056 3.738 9.245 8.56 9.927v-7.02h-2.58v-2.907h2.58V9.413c0-2.564 1.51-3.977 3.822-3.977 1.108 0 2.27.198 2.27.198v2.5h-1.279c-1.262 0-1.656.785-1.656 1.588v1.902h2.809l-.449 2.907h-2.36v7.02C18.262 21.318 22 17.13 22 12.073z"/>
                                     </svg>
                                 </a>
 
-                                <!-- GitHub Icon -->
                                 <a href="https://github.com/DefitSaputra" target="_blank" class="text-blue-500 hover:text-blue-700">
                                     <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                                         <path d="M12 0C5.373 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.6.11.793-.26.793-.577 0-.285-.01-1.04-.016-2.04-3.338.727-4.042-1.614-4.042-1.614-.546-1.386-1.333-1.756-1.333-1.756-1.089-.744.083-.729.083-.729 1.205.085 1.838 1.238 1.838 1.238 1.07 1.833 2.809 1.303 3.495.996.107-.775.418-1.303.762-1.603-2.665-.305-5.467-1.335-5.467-5.932 0-1.31.468-2.381 1.236-3.22-.123-.304-.536-1.528.117-3.184 0 0 1.008-.322 3.302 1.23a11.51 11.51 0 013.006-.404c1.02.005 2.046.138 3.006.404 2.294-1.552 3.301-1.23 3.301-1.23.653 1.656.24 2.88.118 3.184.77.839 1.236 1.91 1.236 3.22 0 4.61-2.807 5.624-5.479 5.921.43.372.814 1.103.814 2.222 0 1.605-.014 2.898-.014 3.293 0 .319.192.694.801.576C20.565 21.797 24 17.302 24 12c0-6.627-5.373-12-12-12z"/>
@@ -245,8 +231,7 @@
                         </div>
                     </div>
                 </div>
-                
-                <!-- Team Member 3 -->
+    
                 <div class="bg-blue-50 rounded-xl overflow-hidden shadow-md hover:shadow-lg transition-shadow duration-300 group">
                     <div class="relative overflow-hidden">
                         <img src="{{ asset('img/anggota3.png') }}" alt="Anggota Tim 3" class="w-full h-64 object-cover object-center transition-transform duration-500 group-hover:scale-105">
@@ -263,14 +248,12 @@
                                 </svg>
                             </a>
                             <div class="flex space-x-4">
-                                <!-- Facebook Icon -->
                                 <a href="https://www.facebook.com/irfan.romadhon.12327/?locale=id_ID" target="_blank" class="text-blue-500 hover:text-blue-700">
                                     <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                                         <path d="M22 12.073C22 6.545 17.523 2 12 2S2 6.545 2 12.073c0 5.056 3.738 9.245 8.56 9.927v-7.02h-2.58v-2.907h2.58V9.413c0-2.564 1.51-3.977 3.822-3.977 1.108 0 2.27.198 2.27.198v2.5h-1.279c-1.262 0-1.656.785-1.656 1.588v1.902h2.809l-.449 2.907h-2.36v7.02C18.262 21.318 22 17.13 22 12.073z"/>
                                     </svg>
                                 </a>
 
-                                <!-- GitHub Icon -->
                                 <a href="https://github.com/flxzn27?tab=overview&from=2025-05-01&to=2025-05-10" target="_blank" class="text-blue-500 hover:text-blue-700">
                                     <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                                         <path d="M12 0C5.373 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.6.11.793-.26.793-.577 0-.285-.01-1.04-.016-2.04-3.338.727-4.042-1.614-4.042-1.614-.546-1.386-1.333-1.756-1.333-1.756-1.089-.744.083-.729.083-.729 1.205.085 1.838 1.238 1.838 1.238 1.07 1.833 2.809 1.303 3.495.996.107-.775.418-1.303.762-1.603-2.665-.305-5.467-1.335-5.467-5.932 0-1.31.468-2.381 1.236-3.22-.123-.304-.536-1.528.117-3.184 0 0 1.008-.322 3.302 1.23a11.51 11.51 0 013.006-.404c1.02.005 2.046.138 3.006.404 2.294-1.552 3.301-1.23 3.301-1.23.653 1.656.24 2.88.118 3.184.77.839 1.236 1.91 1.236 3.22 0 4.61-2.807 5.624-5.479 5.921.43.372.814 1.103.814 2.222 0 1.605-.014 2.898-.014 3.293 0 .319.192.694.801.576C20.565 21.797 24 17.302 24 12c0-6.627-5.373-12-12-12z"/>

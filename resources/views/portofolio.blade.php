@@ -1,4 +1,4 @@
-<!-- Portfolio Section -->
+
 <section class="bg-gray-50 py-12 px-4 md:px-8">
     <div class="container mx-auto max-w-6xl">
         <!-- Portfolio Header -->
@@ -19,10 +19,8 @@
             </div>
         </div>
 
-        <!-- Portfolio Gallery -->
         <div class="gallery-container">
             <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 md:gap-4">
-                <!-- Gallery Item 1 - Large -->
                 <div class="gallery-item col-span-2 row-span-2 h-64 md:h-80 overflow-hidden rounded-lg shadow-md transform transition duration-300 hover:shadow-lg hover:scale-[1.01]" data-index="1">
                     <div class="relative h-full w-full group">
                         <img 
@@ -37,7 +35,6 @@
                     </div>
                 </div>
 
-                <!-- Gallery Item 2 -->
                 <div class="gallery-item h-40 md:h-48 overflow-hidden rounded-lg shadow-md transform transition duration-300 hover:shadow-lg hover:scale-[1.01]" data-index="2">
                     <div class="relative h-full w-full group">
                         <img 
@@ -52,7 +49,6 @@
                     </div>
                 </div>
 
-                <!-- Gallery Item 3 -->
                 <div class="gallery-item h-40 md:h-48 overflow-hidden rounded-lg shadow-md transform transition duration-300 hover:shadow-lg hover:scale-[1.01]" data-index="3">
                     <div class="relative h-full w-full group">
                         <img 
@@ -67,7 +63,6 @@
                     </div>
                 </div>
 
-                <!-- Gallery Item 4 -->
                 <div class="gallery-item col-span-2 h-40 md:h-48 overflow-hidden rounded-lg shadow-md transform transition duration-300 hover:shadow-lg hover:scale-[1.01]" data-index="4">
                     <div class="relative h-full w-full group">
                         <img 
@@ -82,7 +77,6 @@
                     </div>
                 </div>
 
-                <!-- Gallery Item 5 -->
                 <div class="gallery-item hidden-item h-40 md:h-48 overflow-hidden rounded-lg shadow-md transform transition duration-300 hover:shadow-lg hover:scale-[1.01] hidden" data-index="5">
                     <div class="relative h-full w-full group">
                         <img 
@@ -97,7 +91,6 @@
                     </div>
                 </div>
 
-                <!-- Hidden Gallery Items 6-10 (initially hidden) -->
                 <div class="gallery-item hidden-item h-40 md:h-48 overflow-hidden rounded-lg shadow-md transform transition duration-300 hover:shadow-lg hover:scale-[1.01] hidden" data-index="6">
                     <div class="relative h-full w-full group">
                         <img 
@@ -112,7 +105,6 @@
                     </div>
                 </div>
 
-                <!-- Gallery Item 7 -->
                 <div class="gallery-item hidden-item col-span-2 row-span-2 h-64 md:h-80 overflow-hidden rounded-lg shadow-md transform transition duration-300 hover:shadow-lg hover:scale-[1.01] hidden" data-index="7">
                     <div class="relative h-full w-full group">
                         <img 
@@ -127,7 +119,6 @@
                     </div>
                 </div>
 
-                <!-- Gallery Item 8 -->
                 <div class="gallery-item hidden-item h-40 md:h-48 overflow-hidden rounded-lg shadow-md transform transition duration-300 hover:shadow-lg hover:scale-[1.01] hidden" data-index="8">
                     <div class="relative h-full w-full group">
                         <img 
@@ -142,7 +133,6 @@
                     </div>
                 </div>
 
-                <!-- Gallery Item 9 -->
                 <div class="gallery-item hidden-item h-40 md:h-48 overflow-hidden rounded-lg shadow-md transform transition duration-300 hover:shadow-lg hover:scale-[1.01] hidden" data-index="9">
                     <div class="relative h-full w-full group">
                         <img 
@@ -157,7 +147,6 @@
                     </div>
                 </div>
 
-                <!-- Gallery Item 10 -->
                 <div class="gallery-item hidden-item col-span-2 h-40 md:h-48 overflow-hidden rounded-lg shadow-md transform transition duration-300 hover:shadow-lg hover:scale-[1.01] hidden" data-index="10">
                     <div class="relative h-full w-full group">
                         <img 
@@ -173,8 +162,7 @@
                 </div>
             </div>
         </div>
-
-        <!-- Load More Button -->
+        
         <div class="text-center mt-10">
             <button id="load-more-btn" class="relative inline-block px-8 py-3 text-sm font-semibold text-blue-600 border-2 border-blue-600 rounded-md transition-all duration-300 hover:text-white overflow-hidden">
                 <span class="relative z-10 text-gray-800 hover:text-blue-900 transition-colors duration-300">LIHAT LEBIH BANYAK</span>

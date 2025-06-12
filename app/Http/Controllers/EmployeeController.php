@@ -25,13 +25,11 @@ class EmployeeController extends Controller
             'user_id' => 'required|exists:users,id',
         ]);
         
-        // Add default status
         $validatedData['status'] = 'pending';
         
         // Create new employee record
         $employee = Employee::create($validatedData);
         
-        // Redirect with success message
         return redirect()->back()->with('success', 'Pendaftaran berhasil! Status pendaftaran Anda saat ini: Pending');
     }
 

@@ -6,7 +6,6 @@
     <title>403 - Akses Ditolak</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        /* Anda bisa menambahkan font kustom jika perlu */
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
         body {
             font-family: 'Inter', sans-serif;
